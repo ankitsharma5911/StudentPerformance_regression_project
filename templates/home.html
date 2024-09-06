@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Student performance</h1>
+    <form action="{{ url_for('predict_datapoint')}}" method="post">
+    	<input type="text" name="Hour" placeholder="Hours Studied" required="required" /><br>
+        <input type="text" name="Scores" placeholder="Previous Scores" required="required" /><br>
+        <input type="text" name="Extracurricular" placeholder="Extracurricular Activities" required="required" /><br>
+        <input type="text" name="Sleep" placeholder="Sleep Hours" required="required" /><br>
+        <input type="text" name="SampleQuestionPapers" placeholder="Sample Question Papers Practiced" required="required" /><br>
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+<body>
+
+   <br>
+   <br>
+
+
+ </div>
+ <h1>Person is: {{result}}</h1>
+
+</body>
+</html>
