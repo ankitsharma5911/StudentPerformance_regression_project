@@ -32,8 +32,9 @@ def predict_datapoint():
         new_data = [[Hour,Scores,Extracurricular,Sleep,SampleQuestionPapers]]
         result =model.predict(new_data)
         
-                  
-        return render_template('home.html',result=result[0])
+        Result = round(result[0])
+
+        return render_template('home.html',result = Result)
 
     else:
         return render_template('home.html')
